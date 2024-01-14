@@ -1,0 +1,21 @@
+{
+  "name": "@cachier/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "nx build task-runner --runner=default"
+  },
+  "private": true,
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "@nx/js": "17.2.8",
+    "@nx/workspace": "17.2.8",
+    "nx": "17.2.8",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "task-runner",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json"
+  }
+}
