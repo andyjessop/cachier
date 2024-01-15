@@ -1,7 +1,7 @@
 {
   "name": "my-package",
   "scripts": {
-    "build": "cp src/index.js dist/index.js",
+    "build": "mkdir -p dist && cp src/index.js dist/index.js",
     "test": "node src/index.test.js"
   },
   "type": "module"
