@@ -16,9 +16,12 @@ export default {
 
     if (pathname.startsWith('assets')) {
       const key = pathname.slice('assets/'.length);
+      
       switch (request.method) {
         case 'POST':
-          await env.CACHIER_BUCKET.put(key, request.body);
+          await env.CACHIER_BUCKET.put(key, request.body, {
+            httpMetadata: request.headers,
+          });
           return new Response(`Put ${key} successfully!`);
         case 'GET':
           const object = await env.CACHIER_BUCKET.get(key);
